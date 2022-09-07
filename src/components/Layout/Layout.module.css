@@ -1,0 +1,24 @@
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  background-color: rgb(247, 247, 247);
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+#root * + * {
+  margin-top: 1.5em;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
