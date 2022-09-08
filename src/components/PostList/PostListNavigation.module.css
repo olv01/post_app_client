@@ -1,0 +1,29 @@
+.pagination {
+  padding: 0.75em;
+  margin: auto;
+  display: inline-block;
+  background-color: white;
+  z-index: 1;
+}
+
+.pagination > button {
+  font-family: sans-serif;
+  padding: 0.15em 0.5em;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 0;
+}
+
+.pagination button:hover {
+  background-color: #2746c2;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #2746c2;
+  color: white;
+}

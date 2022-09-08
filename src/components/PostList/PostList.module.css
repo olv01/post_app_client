@@ -1,0 +1,50 @@
+.content {
+  margin: 1em 1em 0;
+}
+
+.content table {
+  border-color: black;
+  width: 100%;
+}
+
+.content thead {
+  height: 35px;
+}
+.content thead tr td {
+  text-align: center;
+}
+
+.content td {
+  margin: 0;
+  padding: 2px 7px 2px 7px;
+  border-bottom: 1px solid #ddd;
+  color: rgb(37, 37, 37);
+}
+
+.th-id {
+  width: 6%;
+}
+
+.th-user {
+  width: 10%;
+}
+
+.th-createdDate {
+  width: 10%;
+}
+
+.content td a {
+  text-decoration: none;
+  color: black;
+}
+
+.content td a:hover {
+  text-decoration: underline;
+}
+
+.content-bottom-nav {
+  display: flex;
+  margin-top: 0;
+  position: relative;
+  padding: 0.5em 1em;
+}
