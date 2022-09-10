@@ -1,0 +1,98 @@
+.signUp-form {
+  padding: 1em;
+}
+
+.signUp-form h3 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.signUp-form div {
+  margin: 1.5em 0 1.5em 0;
+}
+
+.signUp-form label {
+  display: block;
+}
+
+.signUp-form .id-container {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.id-container input.input-id {
+  margin: 0.1em;
+  width: 70%;
+}
+
+.id-container > button {
+  margin-left: auto;
+}
+
+.signUp-form input {
+  display: inline-block;
+  margin-top: 0;
+  width: 100%;
+  height: 2em;
+  border: 1px solid rgb(104, 104, 104);
+}
+
+.signUp-form button {
+  background-color: white;
+  border: 1px solid #0a0d9b;
+  border-radius: 3px;
+  padding: 0.3em 0.7em;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.signUp-form button:hover {
+  background-color: #3759e0;
+  color: white;
+}
+
+.signUp-form button.is-loading {
+  position: relative;
+  color: transparent;
+}
+
+.signUp-form button.is-loading::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  border-top: 2px solid #0a0d9b;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div.error-text {
+  font-size: 0.8em;
+  color: red;
+  margin-top: 0.5em;
+}
+
+div.valid-text {
+  font-size: 0.8em;
+  color: rgb(38, 255, 0);
+  margin-top: 0;
+}

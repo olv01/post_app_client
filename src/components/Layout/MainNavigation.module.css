@@ -1,11 +1,13 @@
 nav {
-  margin: 0;
+  margin-bottom: 1.5em;
 }
 
 .site-nav {
   display: flex;
-  background-color: #38015c;
+  background-color: #2746c2;
+  border-radius: 2px;
   padding: 0.5em;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   list-style-type: none;
 }
 
@@ -21,6 +23,41 @@ nav {
   display: block;
   text-decoration: none;
   color: white;
-  font-weight: bold;
   padding: 0.25em 0.5em;
+}
+
+.site-nav > li > a:hover {
+  text-decoration: underline;
+}
+
+.site-nav div {
+  display: inline-block;
+  color: rgb(217, 217, 217);
+  padding: 0.25em 0.25em;
+  margin: 0;
+}
+
+.site-nav .info {
+  font-size: 0.8em;
+}
+
+.site-nav > .nav-right {
+  margin-left: auto;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-nav button {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.site-nav button:hover {
+  text-decoration: underline;
 }
