@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Spinner from "../components/Layout/Spinner";
 import PostList from "../components/PostList/PostList";
-import { usePostList } from "../hooks/post-hooks";
+import { usePost } from "../hooks/post-hooks";
 import { useCustomSearchParams } from "../hooks/useCustumSearchParams";
 import classes from "./PostListPage.module.css";
 
@@ -9,7 +9,7 @@ const PostListPage = () => {
   const [postListContent, setPostListContent] = useState({});
   const { searchParams, setPartialParam } = useCustomSearchParams();
   const [isLoading, setIsLoading] = useState(true);
-  const { getPostList } = usePostList();
+  const { getPostList } = usePost();
 
   let paramPage = searchParams.get("p") || 1;
 
