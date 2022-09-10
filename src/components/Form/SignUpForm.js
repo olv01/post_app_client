@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useCheckUsername, useSingUp } from "../../hooks/auth-hooks";
+import { useAuth } from "../../hooks/auth-hooks";
 import { useInput } from "../../hooks/use-input";
 import AuthContext from "../../store/auth-context";
 import classes from "./SignUpForm.module.css";
@@ -22,8 +22,7 @@ const validatePassword = (stringToValidate) => {
 
 const SignUpForm = () => {
   const authCtx = useContext(AuthContext);
-  const { signUp } = useSingUp();
-  const { checkUsername } = useCheckUsername();
+  const { signUp, checkUsername } = useAuth();
   const [formIsLoading, setFormIsLoading] = useState(false);
   const [idCheckIsLoading, setIdCheckIsLoading] = useState(false);
 
@@ -70,7 +69,7 @@ const SignUpForm = () => {
 
     if (idValue.length < 4) {
       alert("4글자 이상부터 사용가능합니다");
-      return
+      return;
     }
 
     const data = JSON.stringify({
@@ -87,8 +86,7 @@ const SignUpForm = () => {
         alert("사용자가 이미 존재합니다");
         resetId();
       }
-    } catch (err) {
-    }
+    } catch (err) {}
     setIdCheckIsLoading(false);
   };
 

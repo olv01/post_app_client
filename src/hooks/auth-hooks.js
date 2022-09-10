@@ -8,7 +8,7 @@ const API_AUTH_CHECK_CHECKUSERNAME =
 
 const POST_HEADER = { "Content-Type": "application/json; charset=utf-8" };
 
-export const useSingIn = () => {
+export const useAuth = () => {
   const { error, sendRequest, clearError } = useHttpClient();
 
   const signIn = useCallback(
@@ -26,12 +26,6 @@ export const useSingIn = () => {
     [sendRequest]
   );
 
-  return { error, signIn, clearError };
-};
-
-export const useSingUp = () => {
-  const { error, sendRequest, clearError } = useHttpClient();
-
   const signUp = useCallback(
     async (data) => {
       try {
@@ -46,12 +40,6 @@ export const useSingUp = () => {
     },
     [sendRequest]
   );
-
-  return { error, signUp, clearError };
-};
-
-export const useCheckUsername = () => {
-  const { error, sendRequest, clearError } = useHttpClient();
 
   const checkUsername = useCallback(
     async (data) => {
@@ -68,5 +56,5 @@ export const useCheckUsername = () => {
     [sendRequest]
   );
 
-  return { error, checkUsername, clearError };
+  return { signIn, signUp, checkUsername, error, clearError };
 };

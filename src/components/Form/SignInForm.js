@@ -1,6 +1,6 @@
 import { useContext, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSingIn } from "../../hooks/auth-hooks";
+import { useAuth } from "../../hooks/auth-hooks";
 import AuthContext from "../../store/auth-context";
 import classes from "./SignInForm.module.css";
 
@@ -8,7 +8,7 @@ const SignInForm = () => {
   const authCtx = useContext(AuthContext);
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const { signIn } = useSingIn();
+  const { signIn } = useAuth();
 
   const idInputRef = useRef();
   const passwordInputRef = useRef();
